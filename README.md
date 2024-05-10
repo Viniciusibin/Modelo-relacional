@@ -9,6 +9,11 @@
 **Objetivo:** Descrever o modelo relacional do projeto de forma resumida e simplificada.
 
 &nbsp;&nbsp;&nbsp;&nbsp; O Modelo relacional constitui em uma abordagem fundamental na representação e organização de dados, fornecendo uma perspectiva estrutural e relacional que facilita a descrição das informações. Essa estruturação essencial elimina a necessidade de estruturas adicionais complexas para representar os dados, promovendo assim uma independência dos dados em relação às aplicações que os manipulam.
+<div align="center">
+  <p> <b>Figura 1:</b> - Banco de dados</p>
+<img src="image.png" alt="Imagem do modelo de dados">
+ <p><b>Fonte:</b> Material elaborado pelo autor (2024)</p>
+</div>
 
 ## Entidades
 
@@ -21,17 +26,17 @@
     <li><b>'email'</b>: Endereço de e-mail do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'senha'</b>: Senha do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'age'</b>: Idade do usuário. <b><u>Dataype</u></b>: <b>integer</b> </li>
-    <li><b>'country'</b>: Páis onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'country'</b>: País onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'city'</b>: Cidade onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'neighborhood'</b>: Bairro onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'gender'</b>: Gênero do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'live_type'</b>: Tipo de residência do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'type_of_housing'</b>: Tipo de residência do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'build_family'</b>: Estrutura familiar do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'income'</b>: Renda do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'poeple_in_house'</b>: Número de pessoas na residência do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'family_construction'</b>: Número de pessoas na residência do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     </ul>
 
- &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'contact_users'</b>: Esta tabela armazena informações de contato adicionais dos usuários.
+ &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'contact_a_users'</b>: Esta tabela armazena informações de contato adicionais dos usuários.
 
  Campos:
  <ul>
