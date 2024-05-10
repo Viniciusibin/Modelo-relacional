@@ -92,7 +92,7 @@ h. Para ajudar um amigo/conhecido que não conseguiu ficar com o cachorro</br>
 i. Para salvar sua vida</br> 
 j. Ele/ela era fofo e estava disponível ou foi um encantamento imediato. </br>
 k. Ele me escolheu</br> 
-l. Ele/ela foi um presente</br>
+L. Ele/ela foi um presente</br>
 
 </li>
   </ul>
