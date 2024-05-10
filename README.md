@@ -11,7 +11,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; O Modelo relacional constitui em uma abordagem fundamental na representação e organização de dados, fornecendo uma perspectiva estrutural e relacional que facilita a descrição das informações. Essa estruturação essencial elimina a necessidade de estruturas adicionais complexas para representar os dados, promovendo assim uma independência dos dados em relação às aplicações que os manipulam.
 <div align="center">
   <p> <b>Figura 1:</b> - Banco de dados</p>
-<img src="image.png" alt="Imagem do modelo de dados">
+<img src="foto.png" alt="Imagem do modelo de dados">
  <p><b>Fonte:</b> Material elaborado pelo autor (2024)</p>
 </div>
 
@@ -22,18 +22,19 @@
  Campos:
   <ul>
     <li><b>'id'</b>: Identificador único do usuário ( <b><u>Primary Key</u></b> ). </li>
+    <li><b>'id_contact_users'</b>: Identificador de contato do usuário ( <b><u>Primary Key</u></b> ). </li>
     <li><b>'name'</b>: Nome do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'email'</b>: Endereço de e-mail do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'senha'</b>: Senha do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'password'</b>: Senha do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'age'</b>: Idade do usuário. <b><u>Dataype</u></b>: <b>integer</b> </li>
     <li><b>'country'</b>: País onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'city'</b>: Cidade onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'neighborhood'</b>: Bairro onde reside o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'family_construction'</b>: Número de pessoas na residência do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'gender'</b>: Gênero do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'type_of_housing'</b>: Tipo de residência do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'build_family'</b>: Estrutura familiar do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'income'</b>: Renda do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'family_construction'</b>: Número de pessoas na residência do usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'build_family'</b>: Estrutura familiar do usuário.<b><u> Dataype</u></b>: <b>varchar</b> </li>
     </ul>
 
  &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'contact_a_users'</b>: Esta tabela armazena informações de contato adicionais dos usuários.
@@ -42,20 +43,19 @@
  <ul>
     <li><b>'id'</b>: Identificador único de contato.  </li>
     <li><b>'id_users'</b>: <b><u>Foreign key</u></b> que refere o usuário na tabela <b>'users'</b>. </li>
-    <li><b>'complete_name'</b>: Nome completo de contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'complete_name'</b>: Nome completo para o contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'phone'</b>: Número de telefone de contato. <b><u>Dataype</u></b>: <b>integer</b> </li>
     <li><b>'email'</b>: Endereço de e-mail de contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
   </ul>
 
-  &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'have_dogs'</b>: Esta tabela armazena informações sobre os usuários que possuem cachorros.
+  &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'have_a_dogs'</b>: Esta tabela armazena informações sobre os usuários que possuem cachorros.
 
   Campos:
   <ul>
     <li><b>'id'</b>: Identificador unico do registro ( <b><u>Primary key</u></b> ). </li>
     <li><b>'id_users'</b>: Chave estrangeira que refere ao usuário na tabela <b>'users'</b>. </li>
     <li><b>'dog_name'</b>: Nome do cachorro. <b><u>Dataype</u></b>: <b>varchar</b></li>
-    <li><b>'sex'</b>: Sexo do cachorro. <b><u>Dataype</u></b>: <b>Binary</b> </li>
-    <li><b>'owner'</b>: Se o usuário é o dono do cachorro. <b><u>Dataype</u></b>: <b>binary</b></li>
+    <li><b>'dog_gender'</b>: Sexo do cachorro. <b><u>Dataype</u></b>: <b>Binary</b> </li>
     <li><b>'neutred'</b>: Se o cachorro foi castrado. <b><u>Dataype</u></b>: <b>binary</b> </li>
     <li><b>'time_with_you'</b>: Tempo que o cachorro está com o usuário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'first_dog?'</b>: Se é o primeiro cachorro do usuário. <b><u>Dataype</u></b>: <b>binary</b> </li>
@@ -66,12 +66,13 @@
     <li><b>'was_paid'</b>: Se o usuário pagou pelo cachorro. <b><u>Dataype</u></b>: <b>binary</b> </li>
     <li><b>'age_arrived'</b>: Idade em que o cachorro chegou. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'dog_personality'</b>: Personalidade do cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
-    <li><b>'id_dog_reason'</b>: Motivo pelo qual o usuário tem um cachorro ( referência a tabela <b>'dog_reason'</b> ). <b><u>Dataype</u></b>: <b>text</b> </li>
     <li><b>'favorite_dog_traits'</b>: Características favoritas do cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
     <li><b>'poeple_in_decision'</b>: Pessoas envolvidas na decisão de ter um cachorro. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'dog_not_home'</b>: Se teve um cachorro que não pode manter em casa. <b><u>Dataype</u></b>: <b>text</b> </li>
-    <li><b>'ver_frequency</b>: Frequência de visitas ao veterinário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
+    <li><b>'vet_frequency</b>: Frequência de visitas ao veterinário. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'dog_summary'</b>: Resumo sobre o cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
+    <li><b>'id_dog_reason'</b>: Motivo pelo qual o usuário tem um cachorro ( referência a tabela <b>'dog_reason'</b> ). <b><u>Dataype</u></b>: <b>text</b> </li>
+    <li><b>'owner'</b>: Se o usuário é o dono do cachorro. <b><u>Dataype</u></b>: <b>binary</b></li>
   </ul>
 
   &nbsp;&nbsp;&nbsp;&nbsp; Tabela <b>'dog_reason'</b>: Esta tabela armazena os motivos pelos quais os usuários possuêm cachorros.
@@ -123,8 +124,8 @@ l. Ele/ela foi um presente</br>
     <li><b>'go_to_vet'</b>: Se o cachorro foi ao veterinário. <b><u>Dataype</u></b>: <b>binary</b> </li>
     <li><b>'last_contact'</b>: Último contato. <b><u>Dataype</u></b>: <b>varchar</b></li>
     <li><b>'dog_age_in_last_contact'</b>: Idade do cachorro no último contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-    <li><b>'reasons_of_last_contact'</b>: Razões do último contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'would_have_new_dog'</b>: Se o usuário teria um novo cachorro. <b><u>Dataype</u></b>: <b>binary</b> </li>
+    <li><b>'reasons_of_last_contact'</b>: Razões do último contato. <b><u>Dataype</u></b>: <b>varchar</b> </li>
     <li><b>'reason'</b>: Razão para não ter ou não querer um cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
   </ul>
 
@@ -138,14 +139,14 @@ l. Ele/ela foi um presente</br>
       <li><b>'dog_size'</b>: Tamanho do cachorro desejado. <b><u>Dataype</u></b>: <b>varchar</b> </li>
       <li><b>'dog_coat'</b>: Tipo de pelagem do cão desejado. <b><u>Dataype</u></b>: <b>varchar</b></li>
       <li><b>'dog_breed'</b>: Raça do cachorro desejado. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-      <li><b>'dog_sex'</b>: Sexo do cachorro desejado. <b><u>Dataype</u></b>: <b>binary</b> </li>
-      <li><b>'id_dog_reason'</b>: <b><u>Foreign key</u></b> referenciando a tabela <b>'dog_reason'</b> para estabelecer a razão do desejo de ter um cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
+      <li><b>'dog_gender'</b>: Sexo do cachorro desejado. <b><u>Dataype</u></b>: <b>binary</b> </li>
       <li><b>'thought a DogName?'</b>: Se o usuário já pensou em um nome para o cachorro. <b><u>Dataype</u></b>: <b>binary</b> </li>
       <li><b>'dog_name'</b>: Nome desejado para o cachorro. <b><u>Dataype</u></b>: <b>varchar</b> </li>
       <li><b>'prefer Adopt or buy?'</b>: Preferência por adoção ou compra de um cachorro. <b><u>Dataype</u></b>: <b>varchar</b> </li>
-      <li><b>'When_will_recive_the_dog?'</b>: Quando o usuário receberá o cachorro. <b><u>Dataype</u></b>: <b>varchar</b> </li>
       <li><b>'Personality you expect?'</b>: Personalidade esperada para o cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
+      <li><b>'When_will_recive_the_dog?'</b>: Quando o usuário receberá o cachorro. <b><u>Dataype</u></b>: <b>varchar</b> </li>
       <li><b>'Know_about_coasts?'</b>: Conhecimento sobre os custos relacionados aos cachorros. <b><u>Dataype</u></b>: <b>text</b> </li>
+      <li><b>'id_dog_reason'</b>: <b><u>Foreign key</u></b> referenciando a tabela <li><b>'dog_reason'</b> para estabelecer a razão do desejo de ter um cachorro. <b><u>Dataype</u></b>: <b>text</b> </li>
     
   </ul>
 
